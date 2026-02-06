@@ -26,7 +26,7 @@ const Login = () => {
         </button>
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          Akkauntingiz yo`qmi?{""}
+          Akkauntingiz yo`qmi{""}
           <Link to={"/register"}>
             <span className="text-blue-600 font-medium cursor-pointer hover:underline">
             Ro`yxatdan o`tish
