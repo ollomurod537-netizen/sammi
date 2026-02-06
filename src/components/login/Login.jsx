@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import Input from "../ui/Input";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-50">
@@ -21,7 +24,9 @@ const Login = () => {
           <Input label={"Password"} type={"password"} state={password} setState={setPassword}/>
         </div>
 
-        <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+        <button  
+        onClick={dispatch}
+        className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
           Kirish
         </button>
 
